@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Nanum";
+  src: url("/public/NanumPenScript-Regular.ttf");
+}
+
+html,body{
+  margin: 0px;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+}
+
+#root{
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0px 20px;
+}
+
+body * {
+  font-family: "Nanum";
+}
