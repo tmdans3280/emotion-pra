@@ -14,22 +14,19 @@ import Notfound from './pages/Notfound';
 const mockData = [{
   id: 1,
   createdDate: new Date("2024-12-05").getTime(),
-  emotionid: 1,
-
+  emotionId: 1,
   content: "1번 일기내용"
 },
 {
   id: 2,
   createdDate: new Date("2024-12-06").getTime(),
-  emotionid: 2,
-
+  emotionId: 2,
   content: "2번 일기내용"
 },
 {
   id: 3,
   createdDate: new Date("2024-11-06").getTime(),
-  emotionid: 3,
-
+  emotionId: 3,
   content: "3번 일기내용"
 },
 
@@ -104,7 +101,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/new' element={<New />} />
             <Route path='/diary/:id' element={<Diary />} />
-            <Route path='/edit:id' element={<Edit />} />
+            <Route path='/edit/:id' element={<Edit />} />
             <Route path='*' element={<Notfound />} />
           </Routes>
 

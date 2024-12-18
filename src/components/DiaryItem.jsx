@@ -3,29 +3,31 @@ import Button from "./Button";
 import "./DiaryItem.css"
 import { useContext } from "react";
 import { DiaryStateContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
 
-const emotionId = 1;
 
-const DiaryItem = () => {
+
+const DiaryItem = ({ id, emotionId, createdDate, content }) => {
 
   const data = useContext(DiaryStateContext)
+  const nav = useNavigate()
 
 
   return <div className="DiaryItem">
-    <section className={`img_section img_section_${emotionId}`}>
-      <img src={getEmotionImage(1)} />
+    <section onClick={() => nav(`/diary/${id}`)} className={`img_section img_section_${emotionId}`}>
+      <img src={getEmotionImage(emotionId)} />
     </section>
 
-    <section className="info_section">
-      <div className="created_date">2024-12-02</div>
-      <div className="content">{}</div>
+    <section onClick={() => nav(`/diary/${id}`)} className="info_section">
+      <div className="created_date">{new Date(createdDate).toLocaleDateString()}</div>
+      <div className="content">{content}</div>
     </section>
 
     <section className="btn_section">
-      <Button text={"수정하기"} />
+      <Button onClick={() => nav(`/diary/${id}`)} text={"수정하기"} />
     </section>
   </div>
 }
 
-export default DiaryItem
+export default DiaryItem  
