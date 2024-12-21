@@ -6,6 +6,13 @@
   font-weight: bold;
 }
 
+.Editor .emotion_section .emotion_list_wrapper{
+  display: flex;
+  gap: 2%;
+  justify-content: space-around;
+}
+
+
 .Editor>section>input,
 textarea {
     background-color: rgb(236, 236, 236);
